@@ -57,6 +57,7 @@ OrganDonorRegistry/
 ├── js/
 │   ├── bootstrap.bundle.min.js # Bootstrap 5 JS (local copy)
 │   ├── storage.js        # localStorage data-access layer
+│   ├── seed.js           # Loads sample records on the first run only
 │   ├── common.js         # Shared navbar, alerts, validation helpers
 │   ├── donor.js          # Donor page logic
 │   ├── recipient.js      # Recipient page logic
@@ -83,6 +84,9 @@ OrganDonorRegistry/
 - **Input validation** — required fields cannot be empty, age must be numeric,
   phone number must contain digits only, with friendly on-screen messages.
 - **Persistent storage** using the browser's localStorage.
+- **Sample data on first run** — a few realistic donors and recipients are
+  loaded automatically the first time the app is opened, so the registry is not
+  empty. This happens only once and never overwrites your own records.
 - **Responsive, professional UI** with a blue theme on a white background.
 - **Fully offline** — Bootstrap is bundled locally, so no internet is needed.
 
@@ -96,4 +100,6 @@ OrganDonorRegistry/
 Done. The application opens in your default web browser and is ready to use.
 
 > Tip: All data you enter is stored in your browser on this device. Using the
-> same browser again will show your previously saved records.
+> same browser again will show your previously saved records. On the very first
+> launch the app loads a few sample records so the registry is not empty; you
+> can edit or delete them freely.
