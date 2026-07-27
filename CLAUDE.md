@@ -407,3 +407,24 @@ Before finishing, verify that
 ✓ Report is complete.
 
 The generated project should be immediately ready for college submission without requiring any manual changes.
+
+---
+
+# Generation Order (Mandatory)
+
+Follow this exact order:
+
+1. Plan the project.
+2. Generate the complete folder structure.
+3. Implement all HTML, CSS and JavaScript.
+4. Verify that every feature works correctly.
+5. Ensure opening `index.html` runs the application.
+6. Populate the application with a few realistic sample records (optional but recommended).
+7. Capture screenshots of every page from the completed application.
+8. Generate the project report using the captured screenshots.
+9. Export the report as both `Project_Report.docx` and `Project_Report.pdf`.
+10. Perform a final verification that the project is complete and ready for submission.
+
+Do NOT generate the report before the application is complete.
+Do NOT use placeholder screenshots.
+Use screenshots captured from the final working application.
