@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | Organ Donor Registry</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Shared navigation bar is injected here by common.js -->
+  <div id="mainNav"></div>
+
+  <main class="container page-section">
+    <!-- Page heading -->
+    <div class="text-center mb-4">
+      <img src="assets/logo.png" alt="Organ Donor Registry logo" class="brand-logo mb-2">
+      <h1 class="page-title">Organ Donor Registry Management System</h1>
+      <p class="text-muted">A simple, offline registry for organ donors and recipients.</p>
+    </div>
+
+    <!-- Statistics -->
+    <div class="row g-3 mb-4">
+      <div class="col-12 col-md-6">
+        <div class="card stat-card h-100">
+          <div class="card-body text-center">
+            <div class="stat-number" id="totalDonors">0</div>
+            <div class="stat-label">Total Donors</div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6">
+        <div class="card stat-card h-100">
+          <div class="card-body text-center">
+            <div class="stat-number" id="totalRecipients">0</div>
+            <div class="stat-label">Total Recipients</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation cards -->
+    <h2 class="h5 page-title mb-3">Quick Actions</h2>
+    <div class="row g-3">
+      <div class="col-12 col-md-6">
+        <a href="donors.html" class="card nav-card">
+          <div class="card-body">
+            <div class="nav-card-icon mb-2">&#10133;</div>
+            <h3 class="h5 mb-1">Donor Registration</h3>
+            <p class="text-muted mb-0">Register a new organ donor and manage existing donor records.</p>
+          </div>
+        </a>
+      </div>
+      <div class="col-12 col-md-6">
+        <a href="recipients.html" class="card nav-card">
+          <div class="card-body">
+            <div class="nav-card-icon mb-2">&#10133;</div>
+            <h3 class="h5 mb-1">Recipient Registration</h3>
+            <p class="text-muted mb-0">Register a new organ recipient and manage existing recipient records.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer py-3 mt-4">
+    <div class="container text-center">
+      Organ Donor Registry Management System &mdash; College Mini Project
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    // Dashboard-specific logic: draw the navbar and fill in the live counts.
+    function initDashboard() {
+      renderNavbar('dashboard');
+      document.getElementById('totalDonors').textContent = getDonors().length;
+      document.getElementById('totalRecipients').textContent = getRecipients().length;
+    }
+    document.addEventListener('DOMContentLoaded', initDashboard);
+  </script>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Organ Donor Registry</title>
+  <link rel="icon" href="assets/logo.png" type="image/png">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="mainNav"></div>
+
+  <main class="container page-section">
+    <h1 class="page-title mb-4">About This Project</h1>
+
+    <!-- Project Description -->
+    <div class="card mb-4">
+      <div class="card-header">Project Description</div>
+      <div class="card-body">
+        <p class="mb-0">
+          The Organ Donor Registry Management System is a lightweight, offline
+          web application for recording and managing organ donors and organ
+          recipients. It lets an operator register donor and recipient details,
+          view them in clear tables, edit or delete records, and search the
+          donor registry by name, blood group or organ. All information is kept
+          on the user's own device using the browser's localStorage, so the
+          project runs entirely in the browser without any server, database or
+          internet connection.
+        </p>
+      </div>
+    </div>
+
+    <!-- Objectives -->
+    <div class="card mb-4">
+      <div class="card-header">Objectives</div>
+      <div class="card-body">
+        <ul class="mb-0">
+          <li>Maintain a simple, searchable registry of organ donors.</li>
+          <li>Maintain a registry of organ recipients awaiting a transplant.</li>
+          <li>Provide full create, read, update and delete (CRUD) operations.</li>
+          <li>Validate user input so records stay clean and consistent.</li>
+          <li>Work completely offline with no installation or backend server.</li>
+          <li>Offer a clean, responsive and professional user interface.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Technologies Used -->
+    <div class="card mb-4">
+      <div class="card-header">Technologies Used</div>
+      <div class="card-body">
+        <ul class="mb-0">
+          <li><strong>HTML5</strong> &mdash; page structure and forms.</li>
+          <li><strong>CSS3</strong> &mdash; custom styling and the blue theme.</li>
+          <li><strong>Vanilla JavaScript</strong> &mdash; application logic and validation.</li>
+          <li><strong>Bootstrap 5</strong> (bundled locally) &mdash; responsive layout and components.</li>
+          <li><strong>Browser localStorage</strong> &mdash; client-side data storage.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="text-center text-muted">
+      <img src="assets/logo.png" alt="Organ Donor Registry logo" width="64" height="64" class="mb-2">
+      <p class="mb-0">Organ Donor Registry Management System &mdash; College Mini Project</p>
+    </div>
+  </main>
+
+  <footer class="site-footer py-3 mt-4">
+    <div class="container text-center">
+      Organ Donor Registry Management System &mdash; College Mini Project
+    </div>
+  </footer>
+
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/storage.js"></script>
+  <script src="js/common.js"></script>
+  <script>
+    // The About page only needs the shared navigation bar.
+    document.addEventListener('DOMContentLoaded', function () {
+      renderNavbar('about');
+    });
+  </script>
+</body>
+</html>

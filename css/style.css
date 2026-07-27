@@ -1,0 +1,119 @@
+/*
+ * style.css
+ * ---------------------------------------------------------------------------
+ * Custom styling for the Organ Donor Registry Management System.
+ * Layered on top of Bootstrap 5. Blue theme, white background, minimal look.
+ * No animations or decorative effects (per project requirements).
+ * ---------------------------------------------------------------------------
+ */
+
+:root {
+  --odr-blue: #0d6efd;
+  --odr-blue-dark: #0b5ed7;
+  --odr-bg: #ffffff;
+  --odr-muted: #f5f7fb;
+  --odr-border: #e3e8f0;
+}
+
+body {
+  background-color: var(--odr-bg);
+  color: #1f2937;
+}
+
+/* Turn off Bootstrap's transitions/animations to keep the UI static. */
+*,
+*::before,
+*::after {
+  transition: none !important;
+  animation: none !important;
+}
+
+/* ---- Layout ---- */
+.page-section {
+  padding-top: 1.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.page-title {
+  color: var(--odr-blue-dark);
+  font-weight: 600;
+}
+
+/* ---- Cards ---- */
+.card {
+  border: 1px solid var(--odr-border);
+  border-radius: 8px;
+}
+
+.card-header {
+  background-color: var(--odr-muted);
+  border-bottom: 1px solid var(--odr-border);
+  font-weight: 600;
+  color: var(--odr-blue-dark);
+}
+
+/* Stat cards on the dashboard */
+.stat-card {
+  background-color: var(--odr-blue);
+  color: #ffffff;
+}
+
+.stat-card .stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.stat-card .stat-label {
+  font-size: 1rem;
+  opacity: 0.95;
+}
+
+/* Navigation cards on the dashboard */
+.nav-card {
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.nav-card:hover {
+  border-color: var(--odr-blue);
+}
+
+.nav-card .nav-card-icon {
+  font-size: 2rem;
+  color: var(--odr-blue);
+}
+
+/* ---- Tables ---- */
+.table thead th {
+  background-color: var(--odr-blue);
+  color: #ffffff;
+  border-color: var(--odr-blue);
+  white-space: nowrap;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+}
+
+/* ---- Brand / logo ---- */
+.brand-logo {
+  width: 96px;
+  height: 96px;
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  background-color: var(--odr-muted);
+  border-top: 1px solid var(--odr-border);
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* Required-field asterisk */
+.required::after {
+  content: " *";
+  color: #dc3545;
+}
